@@ -83,10 +83,21 @@ const MainContent: React.FC = () => {
         </p>
       </div>
 
-      {/* Block Editor */}
-      <div className="px-4 py-6 max-w-4xl mx-auto inset-0 absolute">
-        <BlockEditor key={selectedPage.id} pageId={selectedPage.id} />
+           {/* Block Editor Overlay */}
+      <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/40 backdrop-blur-sm overflow-y-auto">
+        <div className="bg-white rounded-2xl shadow-2xl mt-16 w-full max-w-4xl mx-auto p-6 relative">
+          {/* Close button (optional UI only, no logic) */}
+          <button
+            className="absolute top-3 right-3 p-2 rounded-full hover:bg-gray-100 transition"
+          >
+            ✕
+          </button>
+      
+          {/* Editor content */}
+          <BlockEditor key={selectedPage.id} pageId={selectedPage.id} />
+        </div>
       </div>
+
     </div>
   );
 };
