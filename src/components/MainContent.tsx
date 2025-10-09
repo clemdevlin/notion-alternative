@@ -88,8 +88,6 @@ const MainContent: React.FC = () => {
         <div className="px-4 py-6 max-w-4xl mx-auto">
           <BlockEditor key={selectedPage.id} pageId={selectedPage.id} />
         </div>
-      </div>
-
     </div>
   );
 };
