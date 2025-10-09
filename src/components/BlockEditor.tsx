@@ -34,11 +34,14 @@ const BlockEditor: React.FC<BlockEditorProps> = ({ pageId }) => {
     // Handle slash command detection
     if (content.endsWith('/')) {
       const blockElement = document.getElementById(`block-${blockId}`);
-      if (blockElement) {
-        const rect = blockElement.getBoundingClientRect();
+      const editorElement = editorRef.current;
+      if (blockElement && editorElement) {
+        const blockRect = blockElement.getBoundingClientRect();
+        const editorRect = editorElement.getBoundingClientRect();
+    
         setSlashMenuPosition({
-          top: rect.bottom + window.scrollY,
-          left: rect.left + window.scrollX
+          top: blockRect.bottom - editorRect.top + 4, // +4px small offset
+          left: blockRect.left - editorRect.left + 8  // +8px padding
         });
         setShowSlashMenu(true);
         setFocusedBlockId(blockId);
