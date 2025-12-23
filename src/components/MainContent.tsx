@@ -49,7 +49,7 @@ const MainContent: React.FC = () => {
 
   return (
     <div className={`flex-1 bg-white transition-all duration-300 ease-in-out ${
-      isSidebarCollapsed ? 'ml-0' : ''
+      isSidebarCollapsed ? 'ml-16' : 'ml-64'
     }`}>
       {/* Page Header */}
       <div className="border-b border-gray-200 px-8 py-6">
