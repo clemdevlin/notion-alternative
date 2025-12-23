@@ -4,7 +4,7 @@ import { useApp } from '../../context/AppContext';
 import { RoadmapTask } from '../../types';
 
 const RoadmapTemplate: React.FC = () => {
-  const { roadmapTasks, addRoadmapTask, updateRoadmapTask, deleteRoadmapTask } = useApp();
+  const { roadmapTasks, addRoadmapTask, updateRoadmapTask, deleteRoadmapTask, isSidebarCollapsed } = useApp();
   const [showAddModal, setShowAddModal] = useState(false);
 
   // Calculate statistics
@@ -51,7 +51,7 @@ const RoadmapTemplate: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 bg-white">
+    <div className={`flex-1 bg-white ${isSidebarCollapsed ? 'ml-16' : 'ml-64'} `}>
       {/* Header */}
       <div className="border-b border-gray-200 px-8 py-6">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Project Roadmap</h1>
