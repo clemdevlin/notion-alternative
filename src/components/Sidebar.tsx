@@ -171,7 +171,8 @@ const Sidebar: React.FC = () => {
   const rootPages = getChildPages(null);
 
   return (
-    <div className={`${isSidebarCollapsed ? 'w-16' : 'w-64'} bg-slate-900 border-r border-slate-700 h-screen flex flex-col transition-all duration-300 ease-in-out`}>
+    <div className={`${isSidebarCollapsed ? 'w-16' : 'w-64'} bg-slate-900 border-r border-slate-700 h-screen fixed top-0 left-0
+ flex flex-col transition-all duration-300 ease-in-out`}>
       {/* Workspace Header */}
       <div className="p-4 border-b border-slate-700 flex items-center justify-between">
         <div className="flex items-center gap-2">
