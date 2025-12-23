@@ -4,7 +4,7 @@ import { useApp } from '../../context/AppContext';
 import { CalendarEvent } from '../../types';
 
 const CalendarTemplate: React.FC = () => {
-  const { calendarEvents, addCalendarEvent, updateCalendarEvent, deleteCalendarEvent } = useApp();
+  const { calendarEvents, addCalendarEvent, updateCalendarEvent, deleteCalendarEvent, isSidebarCollapsed } = useApp();
   const [currentDate, setCurrentDate] = useState(new Date());
   const [viewMode, setViewMode] = useState<'month' | 'week'>('month');
   const [showAddModal, setShowAddModal] = useState(false);
@@ -119,7 +119,7 @@ const CalendarTemplate: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 bg-white">
+    <div className={`flex-1 bg-white ${isSidebarCollapsed ? 'ml-16' : 'ml-64'} `}>
       {/* Header */}
       <div className="border-b border-gray-200 px-8 py-6">
         <div className="flex items-center justify-between">
