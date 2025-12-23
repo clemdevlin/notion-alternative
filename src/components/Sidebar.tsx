@@ -125,7 +125,7 @@ const Sidebar: React.FC = () => {
                 ) : (
                   <span 
                     className="truncate text-sm hover:bg-slate-800 px-1 py-0.5 rounded flex-1"
-                    onClick={(e) => {
+                    onDoubleClick={(e) => {
                       e.stopPropagation();
                       handlePageTitleEdit(page);
                     }}
