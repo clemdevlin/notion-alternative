@@ -8,7 +8,9 @@ const App: React.FC = () => {
     <AppProvider>
       <div className="flex h-screen bg-gray-100">
         <Sidebar />
-        <MainContent />
+        <div>
+          <MainContent />
+        </div>
       </div>
     </AppProvider>
   );
