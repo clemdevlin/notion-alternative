@@ -31,7 +31,7 @@ const MainContent: React.FC = () => {
 
   if (!selectedPage) {
     return (
-      <div className={`flex-1 flex items-center justify-center bg-white transition-all duration-300 ease-in-out`}>
+      <div className={`flex-1 flex items-center justify-center bg-white transition-all duration-300 ease-in-out ${isSidebarCollapsed ? 'ml-16' : 'ml-64'} `}>
         <div className="text-center text-gray-500">
           <p className="text-lg mb-2">No page selected</p>
           <p className="text-sm">Select a page from the sidebar to get started</p>
@@ -46,7 +46,7 @@ const MainContent: React.FC = () => {
   };
 
   return (
-    <div className={`flex-1 bg-white transition-all duration-300 ease-in-out`}>
+    <div className={`flex-1 bg-white transition-all duration-300 ease-in-out ${isSidebarCollapsed ? 'ml-16' : 'ml-64'} `}>
       {/* Page Header */}
       <div className="border-b border-gray-200 px-8 py-6">
         <div className="relative mb-4">
