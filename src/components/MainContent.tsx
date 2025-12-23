@@ -32,7 +32,7 @@ const MainContent: React.FC = () => {
   if (!selectedPage) {
     return (
       <div className={`flex-1 flex items-center justify-center bg-white transition-all duration-300 ease-in-out ${
-        isSidebarCollapsed ? 'ml-0' : ''
+        isSidebarCollapsed ? 'ml-16' : 'ml-64'
       }`}>
         <div className="text-center text-gray-500">
           <p className="text-lg mb-2">No page selected</p>
